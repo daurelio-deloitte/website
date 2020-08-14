@@ -31,7 +31,7 @@ Para obter instruções sobre como criar e trabalhar com tarefas cron, e para ob
 
 ## Limitações do Cron Job
 
-Um trabalho cron cria um objeto de trabalho _about_ uma vez por tempo de execução de seu planejamento, Dizemos "about" porque há certas circunstâncias em que duas tarefas podem ser criadas ou nenhum trabalho pode ser criado. Tentamos torná-los únicos, mas não os impedimos completamente. Portanto, os trabalhos devem ser _idempotente_.
+Um trabalho cron cria um objeto de trabalho _aproximadamente_ uma vez por tempo de execução de seu planejamento, Dizemos "aproximadamente" porque há certas circunstâncias em que duas tarefas podem ser criadas ou nenhum trabalho pode ser criado. Tentamos torná-los únicos, mas não os impedimos completamente. Portanto, os trabalhos devem ser _idempotentes_.
 
 Se `startingDeadlineSeconds` estiver definido como um valor grande ou não definido (o padrão) e se `concurrencyPolicy` estiver definido como `Allow(Permitir)` os trabalhos sempre serão executados pelo menos uma vez.
 
